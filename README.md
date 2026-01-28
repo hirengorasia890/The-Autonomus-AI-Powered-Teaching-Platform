@@ -90,7 +90,8 @@ The platform uses multiple autonomous AI agents to manage lesson planning, conte
       Architecture: Microservices + Agentic AI
 
 - **Founder:** Hiren Jayanti Gorasia,
-- **Co-Founder:** Makavana Mohitkumar Nitinbhai,  
+- **Co-Founder:** Makavana Mohitkumar Nitinbhai,
+- **Mentor:** Dr. Ruchi Patel
 - **B.Tech – Computer Engineering**, Marwadi University, Rajkot (2025–26)
 
 # VidhyanAI 🚀
