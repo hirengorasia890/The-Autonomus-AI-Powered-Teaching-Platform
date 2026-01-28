@@ -89,12 +89,10 @@ The platform uses multiple autonomous AI agents to manage lesson planning, conte
       Embeddings: FastEmbed (BAAI/bge-small-en-v1.5)
       Architecture: Microservices + Agentic AI
 
-👨‍🎓 Authors
-      Hiren Jayanti Gorasia
-      Makavana Mohitkumar Nitinbhai
-      Bachelor of Technology – Computer Engineering
-      Marwadi University, Rajkot (2025–26)
-      
+- **Founder:** Hiren Jayanti Gorasia,
+- **Co-Founder:** Makavana Mohitkumar Nitinbhai,  
+- **B.Tech – Computer Engineering**, Marwadi University, Rajkot (2025–26)
+
 # VidhyanAI 🚀
 **Learn Smarter with Autonomous AI**
 ![About VidhyanAI](./home.png)
