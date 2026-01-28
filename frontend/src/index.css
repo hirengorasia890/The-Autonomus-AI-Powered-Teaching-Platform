@@ -1,0 +1,292 @@
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #ffffffe4;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Font family variables */
+  --font-heading: 'Poppins', 'Inter', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+/* Scrollbar styles defined at bottom of file */
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #111;
+  color: #fff;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* Font utility classes */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+
+
+/* Assuming your main layout is a flex container like this: */
+.main-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.left-sidebar {
+  /* Your left sidebar styles */
+  flex-shrink: 0;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  /* Makes main content scrollable if long, without affecting sidebars */
+}
+
+.right-sidebar {
+  /* Your right sidebar styles */
+  flex-shrink: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  min-height: 2.5rem;
+  box-sizing: border-box;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 0px #b43e10;
+    filter: brightness(1);
+  }
+
+  50% {
+    box-shadow: 0 0 25px #b43e10;
+    filter: brightness(1.3);
+  }
+
+  100% {
+    box-shadow: 0 0 0px #b43e10;
+    filter: brightness(1);
+  }
+}
+
+.glow-once {
+  animation: glowPulse 1.8s ease-in-out;
+}
+
+/* Smooth text reveal animation inspired by your SVG motion */
+
+.lumos-text {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.lumos-text .char {
+  display: inline-block;
+  transform: translateX(-120%);
+  opacity: 0;
+  animation: typeIn 0.8s ease forwards;
+}
+
+.lumos-text .char:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.lumos-text .char:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.lumos-text .char:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.lumos-text .char:nth-child(4) {
+  animation-delay: 0.55s;
+}
+
+.lumos-text .char:nth-child(5) {
+  animation-delay: 0.7s;
+}
+
+.lumos-text .char:nth-child(6) {
+  animation-delay: 0.85s;
+}
+
+.lumos-text .char:nth-child(7) {
+  animation-delay: 1s;
+}
+
+@keyframes typeIn {
+  from {
+    transform: translateX(-120%) scale(0.8);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateX(10%) scale(1.05);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.corner-fill {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Common */
+.corner-fill::before,
+.corner-fill::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  /* slightly bigger */
+  height: 90px;
+  background: rgba(34, 211, 238, 0.28);
+  pointer-events: none;
+}
+
+/* TOP-LEFT */
+.corner-fill::before {
+  top: 0;
+  /* start from edge */
+  left: 0;
+  transform: translate(-1px, -1px);
+  /* 🔥 removes micro-gap */
+  border-bottom-right-radius: 100%;
+}
+
+/* BOTTOM-RIGHT */
+.corner-fill::after {
+  bottom: 0;
+  right: 0;
+  transform: translate(1px, 1px);
+  /* 🔥 removes micro-gap */
+  border-top-left-radius: 100%;
+}
+
+/* remove native time icon */
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[type="time"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+/* Hide native date picker icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+input[type="date"] {
+  position: relative;
+}
+
+/* ===== Custom Scrollbar (Visible & Clean) ===== */
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.6);
+  /* gray-500 */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 116, 139, 0.9);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 116, 139, 0.6) transparent;
+}
