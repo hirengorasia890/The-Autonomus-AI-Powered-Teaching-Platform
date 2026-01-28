@@ -95,5 +95,6 @@ The platform uses multiple autonomous AI agents to manage lesson planning, conte
       Bachelor of Technology – Computer Engineering
       Marwadi University, Rajkot (2025–26)
       
-## 👥 About Us
-![About VidhyanAI](./About_Us.png)
+# VidhyanAI 🚀
+**Learn Smarter with Autonomous AI**
+![About VidhyanAI](./home.png)
