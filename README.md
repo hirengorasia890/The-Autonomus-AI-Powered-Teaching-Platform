@@ -94,3 +94,6 @@ The platform uses multiple autonomous AI agents to manage lesson planning, conte
       Makavana Mohitkumar Nitinbhai
       Bachelor of Technology – Computer Engineering
       Marwadi University, Rajkot (2025–26)
+      
+## 👥 About Us
+![About VidhyanAI](./About_Us.png)
