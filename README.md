@@ -1,4 +1,4 @@
-🌐 **Website Link:** [vidhyanai.com](https://api.vidhyanai.com)
+🌐 **Website Link:** [vidhyanai.com](https://vidhyanai.com)
 
 The Autonomous AI-Powered Teaching Platform is an intelligent, agent-based learning system designed to deliver personalized, automated, and adaptive education using Agentic Artificial Intelligence.
 The platform uses multiple autonomous AI agents to manage lesson planning, content generation, scheduling, doubt resolution, notifications, and progress tracking with minimal human intervention.
